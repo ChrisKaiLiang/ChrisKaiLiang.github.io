@@ -1,0 +1,24 @@
+title:              Kai Liang Blog
+email:              liangkai.chris@hotmail.com
+description:        Ground Control to Major Tom
+author:             Kai Liang
+baseurl:            "/ChrisKaiLiang.github.io"
+url:                "https://ChrisKaiLiang.github.io"
+
+# Social Profiles
+twitter_username:
+github_username:
+facebook_username:
+linkedin_username:
+
+# Add your google-analytics ID here to activate google analytics
+google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
+
+# Build settings
+markdown:           kramdown
+paginate:           5
+paginate_path:      "/posts/page:num/"
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap ## Uncomment this line to silently generate a sitemaps.org compliant sitemap for your Jekyll site
