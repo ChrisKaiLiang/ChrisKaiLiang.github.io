@@ -1,12 +1,10 @@
-# Kai Liang - Personal [Blog](kai-liang.com)
+# Kai Liang - Personal Blog
 
 This repository holds the personal blog of Kai Liang.
 
 ## Preview
 
 [![Clean Blog (Jekyll) Preview](https://startbootstrap.com/assets/img/screenshots/themes/clean-blog-jekyll.png)](http://blackrockdigital.github.io/startbootstrap-clean-blog-jekyll/)
-
-**[View Live Preview](http://blackrockdigital.github.io/startbootstrap-clean-blog-jekyll/)**
 
 
 ## Copyright and License
