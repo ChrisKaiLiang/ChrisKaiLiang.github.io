@@ -4,7 +4,7 @@ title: "共享单车用户画像"
 subtitle: "subtitle"
 date: 2020-09-25 00:30:00 -0100
 background: '/img/posts/06.jpg'
-permalink: '/shared_bike'
+permalink: '/shared-bike'
 ---
 
 # 共享单车用户画像
