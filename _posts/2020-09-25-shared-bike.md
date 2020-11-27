@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "共享单车用户画像"
-subtitle: "subtitle"
+subtitle: "使用聚类方法进行用户画像"
 date: 2020-09-25 00:30:00 -0100
 background: '/img/posts/06.jpg'
 permalink: '/shared-bike'
