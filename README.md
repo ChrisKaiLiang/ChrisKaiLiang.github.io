@@ -5,7 +5,7 @@ New line 2
 
 ## Preview
 
-[![Clean Blog (Jekyll) Preview](https://startbootstrap.com/assets/img/screenshots/themes/clean-blog-jekyll.png)](http://blackrockdigital.github.io/startbootstrap-clean-blog-jekyll/)
+![Clean Blog (Jekyll) Preview](img/home_page_preview.png)
 
 
 ## Copyright and License
