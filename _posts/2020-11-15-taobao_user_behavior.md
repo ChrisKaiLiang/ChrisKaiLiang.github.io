@@ -43,17 +43,22 @@ UserBehavior是阿里巴巴提供的一个淘宝用户行为数据集，包含�
 <br/>
 ### 1.2 分析目标
 
-- 流量指标
-- 用户消费频次
-- 用户行为在时间维度的分布
-- 用户行为转化漏斗
-- 用户留存率
-- 商品销量
-- RFM
+- 用户数据指标
+    - 日新增用户
+    - 活跃率
+    - 用户留存
+    - 用户价值分析 (RFM)
+- 行为数据指标
+    - 流量指标 (PV, UV)
+    - 转化率
+- 产品数据指标
+    - 付费率
+    - 复购率
+    - 热销商品
 
 
 
 
-
-
+<br/>
+<br/>
 <span>Cover Photo by <a href="https://unsplash.com/@glenncarstenspeters?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Glenn Carstens-Peters</a> on <a href="https://unsplash.com/s/photos/computer?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
