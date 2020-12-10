@@ -9,8 +9,9 @@ permalink: '/taobao-user-behavior'
 
 # 淘宝用户行为分析
 
-TODO: upload analysis  
-**项目代码-GitHub**
+[项目代码(SQL)-GitHub](https://github.com/ChrisKaiLiang/Data-Analysis-and-Machine-Learning-Projects/blob/master/Taobao_user_behaviour/Taobao_user_behavior_SQL.ipynb)
+
+[项目代码(Python)-GitHub](https://github.com/ChrisKaiLiang/Data-Analysis-and-Machine-Learning-Projects/blob/master/Taobao_user_behaviour/Taobao_user_behavior_Python.ipynb)
 
 
 ## 1 - 项目简介  
@@ -57,7 +58,7 @@ UserBehavior是阿里巴巴提供的一个淘宝用户行为数据集，包含�
     - 热销商品
 
 
-
+TODO: upload analysis  
 
 <br/>
 <br/>
