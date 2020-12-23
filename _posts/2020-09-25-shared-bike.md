@@ -268,10 +268,6 @@ plt.show()
 
 ### 3.7 平均骑行速度
 
-
-```python
-
-
 ```python
 plt.figure(figsize=(15,5))
 
