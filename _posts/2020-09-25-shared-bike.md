@@ -15,12 +15,12 @@ permalink: '/shared-bike'
 
 **任务说明**  
 
-摩拜单车，英文名mobike，是由胡玮炜创办的北京摩拜科技有限公司研发的互联网短途出行解决方案，是无桩借还车模式的智能硬件。人们通过智能手机就能快速租用和归还一辆摩拜单车，用可负担的价格来完成一次几公里的市内骑行。
+摩拜单车，英文名mobike，是北京摩拜科技有限公司研发的互联网短途出行解决方案，是无桩借还车模式的智能硬件。人们通过智能手机就能快速租用和归还一辆摩拜单车，用可负担的价格来完成一次几公里的市内骑行。
 
 由于一公里的出行是一个高频的需求场景，所以mobike单车累计了大量的用户基本信息以及骑行的数据，通过这些数据，能够帮助企业更好识别自己的客群画像和他们的骑行偏好。
 
-**本周你的任务：**  
-根据用户的基本信息以及骑行的数据，完成以下事项：
+**分析目标：**  
+- 对用户数据和骑行数据用行探索分析(EDA)和可视化
 - 使用Python建立聚类分析模型
 - 对于聚类分析模型得出的分群特征进行解读
 
@@ -38,33 +38,6 @@ permalink: '/shared-bike'
 **数据字典**  
 
 <img src='img/shared_bike/mobike_dict.png' alt='dict' width='900'/>
-
-
-```python
->> mobike_raw.info()
-```
-
-    <class 'pandas.core.frame.DataFrame'>
-    RangeIndex: 6427 entries, 0 to 6426
-    Data columns (total 14 columns):
-     #   Column             Non-Null Count  Dtype  
-    ---  ------             --------------  -----  
-     0   user_id            6427 non-null   int64  
-     1   start_time         6427 non-null   object 
-     2   end_time           6427 non-null   object 
-     3   timeduration       6427 non-null   int64  
-     4   bikeid             6427 non-null   int64  
-     5   tripduration       6427 non-null   int64  
-     6   from_station_id    6427 non-null   int64  
-     7   from_station_name  6427 non-null   object 
-     8   to_station_id      6427 non-null   int64  
-     9   to_station_name    6427 non-null   object 
-     10  usertype           6427 non-null   object 
-     11  gender             5938 non-null   object 
-     12  birthyear          5956 non-null   float64
-     13  age                6427 non-null   object 
-    dtypes: float64(1), int64(6), object(7)
-    memory usage: 703.1+ KB
 
 
 
@@ -394,129 +367,7 @@ mobike_cluster['cluster'].value_counts()
 >> mobike_cluster.groupby(['cluster'])['timeduration'].describe()
 ```
 
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>count</th>
-      <th>mean</th>
-      <th>std</th>
-      <th>min</th>
-      <th>25%</th>
-      <th>50%</th>
-      <th>75%</th>
-      <th>max</th>
-    </tr>
-    <tr>
-      <th>cluster</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1399.0</td>
-      <td>7.975697</td>
-      <td>4.156039</td>
-      <td>1.0</td>
-      <td>5.0</td>
-      <td>7.0</td>
-      <td>11.0</td>
-      <td>19.0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>703.0</td>
-      <td>9.615932</td>
-      <td>4.931771</td>
-      <td>1.0</td>
-      <td>6.0</td>
-      <td>9.0</td>
-      <td>13.0</td>
-      <td>23.0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1167.0</td>
-      <td>9.262211</td>
-      <td>4.824872</td>
-      <td>1.0</td>
-      <td>6.0</td>
-      <td>8.0</td>
-      <td>12.0</td>
-      <td>23.0</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>783.0</td>
-      <td>9.286079</td>
-      <td>5.265814</td>
-      <td>1.0</td>
-      <td>5.0</td>
-      <td>8.0</td>
-      <td>13.0</td>
-      <td>25.0</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>179.0</td>
-      <td>20.016760</td>
-      <td>13.295042</td>
-      <td>4.0</td>
-      <td>9.0</td>
-      <td>16.0</td>
-      <td>28.0</td>
-      <td>60.0</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>538.0</td>
-      <td>29.171004</td>
-      <td>7.677662</td>
-      <td>19.0</td>
-      <td>24.0</td>
-      <td>27.0</td>
-      <td>33.0</td>
-      <td>60.0</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>1114.0</td>
-      <td>9.270197</td>
-      <td>4.610593</td>
-      <td>1.0</td>
-      <td>6.0</td>
-      <td>8.0</td>
-      <td>12.0</td>
-      <td>21.0</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
+<img src='img/shared_bike/timeduration_gb.png' alt='timeduration_gb' width='600'/>
 
 
 
@@ -524,129 +375,7 @@ mobike_cluster['cluster'].value_counts()
 >> mobike_cluster.groupby(['cluster'])['tripduration'].describe()
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>count</th>
-      <th>mean</th>
-      <th>std</th>
-      <th>min</th>
-      <th>25%</th>
-      <th>50%</th>
-      <th>75%</th>
-      <th>max</th>
-    </tr>
-    <tr>
-      <th>cluster</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1399.0</td>
-      <td>478.370979</td>
-      <td>248.344145</td>
-      <td>74.0</td>
-      <td>289.00</td>
-      <td>420.0</td>
-      <td>635.00</td>
-      <td>1191.0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>703.0</td>
-      <td>578.083926</td>
-      <td>296.624495</td>
-      <td>67.0</td>
-      <td>348.00</td>
-      <td>527.0</td>
-      <td>762.50</td>
-      <td>1377.0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1167.0</td>
-      <td>555.832905</td>
-      <td>288.001391</td>
-      <td>61.0</td>
-      <td>334.50</td>
-      <td>500.0</td>
-      <td>734.00</td>
-      <td>1394.0</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>783.0</td>
-      <td>557.503193</td>
-      <td>315.455506</td>
-      <td>78.0</td>
-      <td>307.00</td>
-      <td>479.0</td>
-      <td>749.50</td>
-      <td>1477.0</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>179.0</td>
-      <td>1201.486034</td>
-      <td>798.199824</td>
-      <td>236.0</td>
-      <td>529.50</td>
-      <td>980.0</td>
-      <td>1667.50</td>
-      <td>3597.0</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>538.0</td>
-      <td>1748.819703</td>
-      <td>461.001346</td>
-      <td>1147.0</td>
-      <td>1431.00</td>
-      <td>1632.5</td>
-      <td>1959.75</td>
-      <td>3583.0</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>1114.0</td>
-      <td>555.160682</td>
-      <td>276.301969</td>
-      <td>80.0</td>
-      <td>338.25</td>
-      <td>495.0</td>
-      <td>735.50</td>
-      <td>1279.0</td>
-    </tr>
-  </tbody>
-</table>
-</div>
+<img src='img/shared_bike/tripduarion_gb.png' alt='tripduarion_gb' width='600'/>
 
 
 
